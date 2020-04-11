@@ -3,21 +3,20 @@ body {
 }
 
 .container {
-  display: flex;
+  display: grid;
+  grid-template-rows: auto auto 60px auto;
+  gap: 50px;
+  padding-top: 50px;
+  justify-items: center;
   align-items: center;
-  flex-direction: column;
   max-width: 1280px;
   margin: 0 auto;
-}
-
-.image {
-  width: 370px;
-  margin-top: 50px;
 }
 
 @media only screen and (max-width: 770px) {
   .container {
     margin: 0 30px;
+    grid-template-rows: auto 60px auto auto;
   }
 
   .image {

@@ -36,12 +36,14 @@ const App = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <img className={styles.image} src={coronaLogo} alt="Corona Vírus Logo"/>
-      <Cards data={data} loading={loading}/>
-      <CountryPicker handleCountryChange={handleCountryChange} loading={loading} />
-      <Chart data={data} country={country} loading={loading}/>
-    </div>
+    <React.Fragment>
+      <div className={styles.container}>
+        <img className={styles.image} src={coronaLogo} alt="Corona Vírus Logo"/>
+        <Cards data={data} loading={loading}/>
+        <CountryPicker handleCountryChange={handleCountryChange} loading={loading} />
+        <Chart data={data} country={country} loading={loading}/>
+      </div>
+    </React.Fragment>
   );
 }
 

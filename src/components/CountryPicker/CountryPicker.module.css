@@ -1,4 +1,10 @@
 .formControl {
   width: 30%;
-  margin-bottom: 30px !important;
+}
+
+@media (max-width: 770px) {
+  .formControl {
+    grid-row: 2;
+    width: 80%;
+  }
 }
