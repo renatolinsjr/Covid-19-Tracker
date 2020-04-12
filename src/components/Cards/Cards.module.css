@@ -30,6 +30,14 @@
   background: rgba(255, 0, 0, 0.05) !important;
 }
 
+h1 {
+  font-size: 1.2rem !important;
+}
+
+h2 {
+  font-size: 2rem !important;
+}
+
 @media (max-width: 770px) {
   .card {
     margin: 2vh 0 !important;

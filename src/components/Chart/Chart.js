@@ -65,8 +65,7 @@ const Chart = ({ data: {confirmed, recovered, deaths}, country, loading }) => {
 
   return(
     <div className={styles.container}>
-      {loading ? <CircularProgress /> : country ? barChart() : lineChart()}
-      
+        {loading ? <CircularProgress /> : country ? barChart() : lineChart()}
     </div>
   );
 }
