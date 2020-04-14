@@ -24,10 +24,15 @@ const App = () => {
 
   const handleCountryChange = async country => {
     setLoading(true);
-    const fetchedData = await fetchData(country);
-
-    setData(fetchedData);
     setCountry(country);
+
+    if (country === "global") {
+      country = ""
+      setCountry("")
+    }
+
+    const fetchedData = await fetchData(country);
+    setData(fetchedData);
     setLoading(false);
   }
 

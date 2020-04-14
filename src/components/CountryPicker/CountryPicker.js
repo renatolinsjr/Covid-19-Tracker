@@ -21,9 +21,8 @@ const CountryPicker = ({ handleCountryChange }) => {
     <FormControl variant="outlined" className={styles.formControl}>
       <InputLabel>País</InputLabel>
       <Select native label="País" variant="outlined" defaultValue='' onChange={(e) => handleCountryChange(e.target.value)}>
-        <option value=""></option>
-        <option value="">Global</option>
-        {fetchedCountries.map((country, i) => <option key={i} value={country}>{country}</option>)}
+        <option value="global">Global</option>
+        {fetchedCountries.map((country, i) => <option key={i} value={country.originalName}>{country.ptbrName}</option>)}
       </Select>
     </FormControl>
   );
