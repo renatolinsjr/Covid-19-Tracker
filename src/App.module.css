@@ -5,8 +5,8 @@ body {
 .container {
   display: grid;
   grid-template-rows: auto auto 60px auto;
-  gap: 50px;
-  padding-top: 50px;
+  gap: 40px;
+  padding-top: 30px;
   justify-items: center;
   align-items: center;
   max-width: 1280px;

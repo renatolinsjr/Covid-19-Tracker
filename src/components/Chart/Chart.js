@@ -4,10 +4,23 @@ import { fetchDailyData } from '../../api';
 
 import { Line, Bar } from 'react-chartjs-2';
 import { CircularProgress } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
-import styles from './Chart.module.css';
+const useStyles = makeStyles({
+  container: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '65%',
+    minHeight: '400px',
+    '@media only screen and (max-width: 770px)': {
+      width: '100%',
+    }
+  },
+});
 
 const Chart = ({ data: {confirmed, recovered, deaths}, country, loading }) => {
+  const classes = useStyles();
   const [dailyData, setDailyData] = useState([]);
 
   const lineChart = () => {
@@ -63,9 +76,9 @@ const Chart = ({ data: {confirmed, recovered, deaths}, country, loading }) => {
     fetchAPI();
   }, []);
 
-  return(
-    <div className={styles.container}>
-        {loading ? <CircularProgress /> : country ? barChart() : lineChart()}
+  return( 
+    <div className={classes.container}>
+      {loading ? <CircularProgress /> : country ? barChart() : lineChart()}
     </div>
   );
 }
